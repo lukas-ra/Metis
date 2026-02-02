@@ -14,8 +14,20 @@ struct MetisApp: App {
 
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            // Use NSViewControllerRepresentable to wrap the Metal view controller
+            MetalViewControllerRepresentable()
                 .environment(\.managedObjectContext, persistenceController.container.viewContext)
         }
     }
+}
+// Wrapper to use NSViewController in SwiftUI
+struct MetalViewControllerRepresentable: NSViewControllerRepresentable {
+    func makeNSViewController(context: Context) -> ViewController {
+        return ViewController()
+    }
+
+    func updateNSViewController(_ nsViewController: ViewController, context: Context) {
+    }
+
+    typealias NSViewControllerType = ViewController
 }
