@@ -4,7 +4,6 @@
 //
 //  Created by Lukas Raffelt on 02.02.26.
 //
-// Test
 
 import MetalKit
 import simd

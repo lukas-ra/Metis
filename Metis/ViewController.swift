@@ -1,3 +1,10 @@
+//
+//  ViewController.swift
+//  Metis
+//
+//  Created by Lukas Raffelt on 02.02.26.
+//
+
 import Cocoa
 import MetalKit
 
